@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="D:/Dev_Tools/jackson/jackson-core-asl-1.9.13.jar"/>
+	<classpathentry kind="lib" path="D:/Dev_Tools/jackson/jackson-mapper-asl-1.9.13.jar"/>
+	<classpathentry kind="lib" path="D:/Dev_Tools/gson-2.6.2.jar"/>
+	<classpathentry kind="lib" path="D:/Dev_Tools/rest-assured_lib/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="D:/Dev_Tools/rest-assured_lib/commons-lang3-3.4.jar"/>
+	<classpathentry kind="lib" path="D:/Dev_Tools/rest-assured_lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/Dev_Tools/rest-assured_lib/groovy-3.0.3.jar"/>
+	<classpathentry kind="lib" path="D:/Dev_Tools/rest-assured_lib/groovy-json-3.0.3.jar"/>
+	<classpathentry kind="lib" path="D:/Dev_Tools/rest-assured_lib/groovy-xml-3.0.3.jar"/>
+	<classpathentry kind="lib" path="D:/Dev_Tools/rest-assured_lib/hamcrest-2.1.jar"/>
+	<classpathentry kind="lib" path="D:/Dev_Tools/rest-assured_lib/httpclient-4.5.3.jar"/>
+	<classpathentry kind="lib" path="D:/Dev_Tools/rest-assured_lib/httpcore-4.4.6.jar"/>
+	<classpathentry kind="lib" path="D:/Dev_Tools/rest-assured_lib/httpmime-4.5.3.jar"/>
+	<classpathentry kind="lib" path="D:/Dev_Tools/rest-assured_lib/jakarta.activation-api-1.2.2.jar"/>
+	<classpathentry kind="lib" path="D:/Dev_Tools/rest-assured_lib/jakarta.xml.bind-api-2.3.3.jar"/>
+	<classpathentry kind="lib" path="D:/Dev_Tools/rest-assured_lib/jaxb-impl-2.3.3.jar"/>
+	<classpathentry kind="lib" path="D:/Dev_Tools/rest-assured_lib/rest-assured-4.3.1.jar"/>
+	<classpathentry kind="lib" path="D:/Dev_Tools/rest-assured_lib/rest-assured-4.3.1-deps.zip"/>
+	<classpathentry kind="lib" path="D:/Dev_Tools/rest-assured_lib/tagsoup-1.2.1.jar"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/Dev_Tools/selenium-server-standalone-3.141.59.jar"/>
+	<classpathentry kind="lib" path="D:/Dev_Tools/java-client-7.3.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
