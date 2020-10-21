@@ -34,16 +34,16 @@ public class AndroidSwipeTesting {
 		driver=new AndroidDriver<MobileElement>(url, dc);
 		driver.findElement(By.xpath("//android.widget.TextView[@content-desc='Graphics']")).click();
 
-//		Dimension dimension=driver.manage().window().getSize();
-//		int startX=(int) (dimension.width*0.5);
-//		int startY=(int) (dimension.height*0.8);
-//
-//		int endX=(int) (dimension.width*0.2);
-//		int endY=(int) (dimension.width*0.2);
-//
-//		TouchAction touch=new TouchAction(driver);
-//		touch.press(PointOption.point(startX, startY)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
-//		.moveTo(PointOption.point(endX, endY)).release().perform();
+		Dimension dimension=driver.manage().window().getSize();
+		int startX=(int) (dimension.width*0.5);
+		int startY=(int) (dimension.height*0.8);
+
+		int endX=(int) (dimension.width*0.2);
+		int endY=(int) (dimension.width*0.2);
+
+		TouchAction touch=new TouchAction(driver);
+		touch.press(PointOption.point(startX, startY)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+		.moveTo(PointOption.point(endX, endY)).release().perform();
 		MobileElement element = (MobileElement) driver.findElement(MobileBy.AndroidUIAutomator(
 		        "new UiScrollable(new UiSelector().scrollable(true))" +
 		         ".scrollIntoView(new UiSelector().textContains(\"Sweep\"))"));
