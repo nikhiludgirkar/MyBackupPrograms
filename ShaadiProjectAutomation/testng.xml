@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="ShaadiSanitySuite">
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener
+			class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+	<listeners>
+		<listener class-name="com.shaadi.base.TestListeners" />
+	</listeners>
+	<test name="SanityTest1">
+		<classes>
+			<class name="com.shaadi.tests.Test1"></class>
+		</classes>
+	</test>
+</suite>
