@@ -6,6 +6,7 @@ public class LargestNumberLessThanN {
 		//Converting digit to char
 
 		char c = Integer.toString(digit).charAt(0);
+		System.out.println("***********"+c);
 
 		//Decrementing number & checking whether it contains digit
 

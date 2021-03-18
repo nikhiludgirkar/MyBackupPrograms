@@ -1,7 +1,7 @@
 
 public class LongestSequenceOfChar2 {
 	public static void main(String[] args) {
-		String s="hello world";
+		String s="I jhate programming";
 		
 		int y=0;
 		String result=" ";

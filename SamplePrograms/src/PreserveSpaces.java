@@ -13,15 +13,17 @@ public class PreserveSpaces {
 		}
 		int len=resultArray.length-1;
 		System.out.println("length is : "+len);
+		System.out.println("*"+charArray.toString());
 		for (int x=0; x<charArray.length; x++) {
 			if (charArray[x]!=' ') {
-				resultArray[len]=charArray[x];
-				len--;
 				if (resultArray[len]==' ') {
 					len--;
 				}
+				resultArray[len]=charArray[x];
+				len--;
 			}
 		}
-		System.out.println(String.valueOf(resultArray));
+		
+		System.out.println(mainArray+" ---> "+String.valueOf(resultArray));
 	}
 }
