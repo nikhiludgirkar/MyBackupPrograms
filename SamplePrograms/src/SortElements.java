@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 class Insensitive implements Comparator{
 	public final int compare(Object a, Object b) {
 		String a1 = a.toString().toLowerCase();
-        String b1 = b.toString().toLowerCase();
+        String b1 = b.toString().toLowerCase();  
         return b1.compareTo(a1);
 	}
 }
