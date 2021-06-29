@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="119866" started-at="2021-06-29T02:20:51Z" finished-at="2021-06-29T02:22:50Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="119866" started-at="2021-06-29T02:20:51Z" finished-at="2021-06-29T02:22:50Z">
+      <class name="com.covid19.Covid19Project.tests.Test1">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.covid19.Covid19Project.tests.Test1@3f49dace]" name="setup" is-config="true" duration-ms="15410" started-at="2021-06-29T02:20:51Z" finished-at="2021-06-29T02:21:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test1()[pri:0, instance:com.covid19.Covid19Project.tests.Test1@3f49dace]" name="test1" duration-ms="99158" started-at="2021-06-29T02:21:06Z" finished-at="2021-06-29T02:22:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="shutDown()[pri:0, instance:com.covid19.Covid19Project.tests.Test1@3f49dace]" name="shutDown" is-config="true" duration-ms="5097" started-at="2021-06-29T02:22:45Z" finished-at="2021-06-29T02:22:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shutDown -->
+      </class> <!-- com.covid19.Covid19Project.tests.Test1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
