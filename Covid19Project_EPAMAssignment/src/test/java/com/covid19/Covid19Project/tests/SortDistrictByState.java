@@ -1,4 +1,5 @@
 
+
 package com.covid19.Covid19Project.tests;
 
 import static io.restassured.RestAssured.given;
@@ -38,11 +39,17 @@ public class SortDistrictByState implements Comparable<Object>{
 		JsonPath jsonPath=response.jsonPath();
 
 		Map<String, ?> map=jsonPath.get("Maharashtra.districtData");
+
 		String a="";
 		System.out.println("full data is "+map);
 		Map<String, String> districtDeathData=new LinkedHashMap<String, String>();
 		for (Map.Entry<String, ?> m : map.entrySet()) {
 			System.out.println("key "+m.getKey());
+
+		String a=null;
+		System.out.println("full data is "+map);
+		Map<String, String> districtDeathData=new LinkedHashMap<String, String>();
+		for (Map.Entry<String, ?> m : map.entrySet()) {
 			a=m.getValue().toString();
 			int index=a.indexOf("deceased");
 			int fullIndex=index+9;
@@ -78,6 +85,8 @@ public class SortDistrictByState implements Comparable<Object>{
 			System.out.println(m.getKey()+"-> "+m.getValue());
 		}
 		
+//			System.out.println(m.getKey()+"-> "+m.getValue());
+		}
 		Map<String, String> map2=new LinkedHashMap<String, String>();
 		for (Map.Entry<String, ?> m : map.entrySet()) {
 			a=m.getValue().toString();
@@ -87,6 +96,8 @@ public class SortDistrictByState implements Comparable<Object>{
 		}
 		System.out.println("sorted according to active cases");
 //		System.out.println(map2);
+		
+		System.out.println(map2);
 	}
 
 	@Override
@@ -96,4 +107,6 @@ public class SortDistrictByState implements Comparable<Object>{
 		return a-b;
 		
 	}
+
+}
 }
