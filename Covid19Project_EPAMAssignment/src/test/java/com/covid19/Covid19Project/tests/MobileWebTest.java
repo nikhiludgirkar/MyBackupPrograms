@@ -20,6 +20,11 @@ public class MobileWebTest extends MobileLandingApp{
 
 	@Test
 	public void test1() throws InterruptedException {
+		/*
+		 * Validating at least 2 of the details like Confirmed, Deceased with the data from API for the three states.
+		 * SCENARIO 1
+		 */
+		
 		List<String> topDeceasedStateNames=getTopStatesNamesFromUI("Deceased", 3);
 		Map<String, Integer> deceasedCountMap=RestWebserviceHelper.getStateCountByRest("deaths", topDeceasedStateNames);
 		compareResultsWithMobileWeb("deceased", deceasedCountMap);
@@ -29,8 +34,13 @@ public class MobileWebTest extends MobileLandingApp{
 		compareResultsWithWeb("confirmed", confirmedMap);
 
 		List<String> stateNames=getTopStatesNamesFromUI("Active", 3);
-		System.out.println(stateNames);
+		System.out.println("The TOP 3 states are : "+stateNames);
 
+		/*
+		 * Validating the district totals
+		 * SCENARIO 2
+		 */
+		
 		for (int x=0; x<stateNames.size(); x++) {
 			Map<String, String> districtCount=clickListAndReturnDistrictwiseCount(stateNames.get(x));
 //			System.out.println(districtCount);
