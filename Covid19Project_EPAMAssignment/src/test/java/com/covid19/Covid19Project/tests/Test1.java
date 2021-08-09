@@ -16,6 +16,12 @@ public class Test1 extends LandingApp{
 	@Test
 	public void test1() throws InterruptedException {
 		startTest();
+		
+		/*
+		 *Validating at least 2 of the details like Confirmed, Deceased with the data from API for the three states
+		 *SCENARIO 1
+		 * 
+		 */
 		List<String> topDeceasedStateNames=getTopStatesNamesFromUI("Deceased", 3);
 		Map<String, Integer> deceasedMap=RestWebserviceHelper.getStateCountByRest("deaths", topDeceasedStateNames);
 		compareResultsWithWeb("deceased", deceasedMap);
@@ -24,8 +30,16 @@ public class Test1 extends LandingApp{
 		Map<String, Integer> confirmedMap=RestWebserviceHelper.getStateCountByRest("Confirmed", topConfirmedStateNames);
 		compareResultsWithWeb("confirmed", confirmedMap);
 
+		/*
+		 * Printing top 3 states in India
+		 */
 		List<String> stateNames=getTopStatesNamesFromUI("Active", 3);
 		System.out.println(stateNames);
+		
+		/*
+		 * Validating the district totals
+		 * SCENARIO 2
+		 */
 
 		for (int x=0; x<stateNames.size(); x++) {
 			Map<String, String> districtCount=clickListAndReturnDistrictwiseCount(stateNames.get(x));
