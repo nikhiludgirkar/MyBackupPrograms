@@ -32,6 +32,7 @@ public class SortStates{
 			.statusCode(200)
 			.extract()
 			.response();
+		
 		JsonPath jsonPath=response.jsonPath();
 		List<String> state=jsonPath.get("statewise.findAll{it.state!='Total' && it.state!='State Unassigned'}.state");
 		List<String> deathCount=jsonPath.get("statewise.findAll{it.statecode!='TT' && it.statecode!='UN'}.deaths");
