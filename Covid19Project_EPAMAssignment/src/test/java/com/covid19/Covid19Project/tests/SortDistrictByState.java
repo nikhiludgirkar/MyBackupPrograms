@@ -38,26 +38,15 @@ public class SortDistrictByState implements Comparable<Object>{
 		JsonPath jsonPath=response.jsonPath();
 
 		Map<String, ?> map=jsonPath.get("Maharashtra.districtData");
-		String a="";
+
+
+		String a=null;
 		System.out.println("full data is "+map);
 		Map<String, String> districtDeathData=new LinkedHashMap<String, String>();
 		for (Map.Entry<String, ?> m : map.entrySet()) {
-			System.out.println("key "+m.getKey());
 			a=m.getValue().toString();
 			int index=a.indexOf("deceased");
-			System.out.println("index is "+index);
 			int fullIndex=index+9;
-			System.out.println("full index is "+fullIndex);
-			System.out.println("value "+a.substring(fullIndex).split(",")[0]);
-			districtDeathData.put(m.getKey(), a.substring(fullIndex).split(",")[0]);
-//			System.out.println("fullIndex"+fullIndex);
-//			String[] p=a.split(",");
-//			int pos=p[0].length();
-//			System.out.println("position is "+pos);
-//			a=a.substring(fullIndex, pos);
-//			a=a.replaceAll(",", "");
-//			districtData.put(m.getKey(), a);
-		}
 //		a=a.substring(169, 173);
 		List<Integer> deceasedCountList=new ArrayList<Integer>();
 		Map<String, Integer> newConvertedMap=new LinkedHashMap<String, Integer>();
@@ -89,7 +78,8 @@ public class SortDistrictByState implements Comparable<Object>{
 			map2.put(m.getKey(), a.substring(fullIndex).split(",")[0]);
 		}
 		System.out.println("sorted according to active cases");
-//		System.out.println(map2);
+//		System.out.println(map2);		
+		System.out.println(map2);
 	}
 
 	@Override
@@ -100,3 +90,4 @@ public class SortDistrictByState implements Comparable<Object>{
 		
 	}
 }
+
