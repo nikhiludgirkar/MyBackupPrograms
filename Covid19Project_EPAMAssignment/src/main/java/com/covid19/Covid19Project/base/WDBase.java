@@ -12,7 +12,7 @@ public class WDBase {
 	private static WebDriver driver;
 
 	public static void setDriver() throws MalformedURLException {
-		System.setProperty("webdriver.chrome.driver", "D:\\Dev_Tools\\chrome_driver_91\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/drivers/chromedriver.exe");
 		driver=new ChromeDriver();
 		driver.manage().window().maximize();
 	}
@@ -24,7 +24,7 @@ public class WDBase {
 
 	public static void launch() throws IOException{
 		setDriver();
-		getDriver().get("https://www.covid19india.org/");
+		getDriver().get(EnvSpecificData.getData().get("url"));
 	}
 
 	public static void close() {

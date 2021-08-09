@@ -1,5 +1,6 @@
 package com.covid19.Covid19Project.base;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -14,6 +15,13 @@ import org.testng.Assert;
 
 public class LandingApp extends WDBase{
 
+	public static void startTest() {
+		try {
+			launch();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 	public static List<WebElement> getStatesFromUI() throws InterruptedException {
 		Thread.sleep(5000);
 		JavascriptExecutor js=(JavascriptExecutor)getDriver();

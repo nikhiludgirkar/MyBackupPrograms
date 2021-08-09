@@ -1,14 +1,12 @@
 package com.covid19.Covid19Project.base;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 import org.testng.Assert;
 
-import io.restassured.RestAssured;
+
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
@@ -42,9 +40,13 @@ public class RestWebserviceHelper {
 	}
 
 	public static Map<String, Integer> getStateCountByRest(String keyword, List<String> l) {
-		Response response=given()
-				.spec(getCommonSpec())
-			.get()
+			
+			baseURI="https://api.covid19india.org/";
+			
+			Response response=given()
+//				.spec(getCommonSpec())
+				.headers(HeaderData.getHeaderData())
+			.get(EnvSpecificData.getData().get("statecountbasepath"))
 			.then()
 			.statusCode(200)
 			.extract()
@@ -61,9 +63,12 @@ public class RestWebserviceHelper {
 	}
 	
 	public static void getDistrictDetailsByState(String stateName, String cityName, String districtCount) {
+		baseURI="https://api.covid19india.org/";
+		
 		Response response=given()
-				.spec(getCommonSpec2())
-			.get()
+//				.spec(getCommonSpec2())
+				.headers(HeaderData.getHeaderData())
+			.get(EnvSpecificData.getData().get("districtwisebasepath"))
 			.then()
 			.statusCode(200)
 			.extract()
