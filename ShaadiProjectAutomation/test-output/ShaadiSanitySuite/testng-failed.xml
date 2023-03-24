@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ShaadiSanitySuite]">
+  <test name="SanityTest1(failed)">
+    <classes>
+      <class name="com.shaadi.tests.Test1">
+        <methods>
+          <include name="setup"/>
+          <include name="test1"/>
+          <include name="shutDown"/>
+        </methods>
+      </class> <!-- com.shaadi.tests.Test1 -->
+    </classes>
+  </test> <!-- SanityTest1(failed) -->
+</suite> <!-- Failed suite [ShaadiSanitySuite] -->
